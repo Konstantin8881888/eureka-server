@@ -1,0 +1,33 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+#Конфигурация Eureka Server.
+eureka:
+  client:
+    #Серверу не нужно регистрировать себя в собственном реестре.
+    register-with-eureka: false
+    #Серверу не нужно получать список сервисов от других серверов (так как он единственный).
+    fetch-registry: false
+    #Настройка URL для клиентов.
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+  server:
+    #Настройки для ускорения процесса.
+    wait-time-in-ms-when-sync-empty: 0
+    enable-self-preservation: false #Отключаем самосохранение для тестов.
+
+#Эндпоинты актуатора для мониторинга.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics
+  endpoint:
+    health:
+      show-details: always
