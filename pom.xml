@@ -24,7 +24,6 @@
         <spring-cloud.version>2025.0.1</spring-cloud.version>
     </properties>
 
-    <!-- Управление зависимостями Spring Cloud -->
     <dependencyManagement>
         <dependencies>
             <dependency>
