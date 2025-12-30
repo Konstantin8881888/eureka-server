@@ -1,4 +1,4 @@
-# Eureka Server - Service Discovery
+# Eureka Server - Обнаружение сервисов
 
 Централизованный сервис обнаружения для микросервисной архитектуры на базе Netflix Eureka.
 
